@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_people">
+
+    <fragment
+        android:id="@+id/navigation_people"
+        android:name="com.dagger.hilt.ui.people.PeopleFragment"
+        android:label="@string/title_people"
+        tools:layout="@layout/fragment_people" >
+
+        <action
+            android:id="@+id/action_navigation_people_to_navigation_people_details"
+            app:destination="@id/navigation_people_details"
+            app:popUpTo="@id/navigation_people"
+            app:popUpToInclusive="false" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_room"
+        android:name="com.dagger.hilt.ui.room.RoomFragment"
+        android:label="@string/title_room"
+        tools:layout="@layout/fragment_room" />
+
+    <fragment
+        android:id="@+id/navigation_people_details"
+        android:name="com.dagger.hilt.ui.people.PeopleDetailsFragment"
+        android:label="@string/title_people_details"
+        tools:layout="@layout/fragment_people_details" >
+
+        <argument
+            android:name="people"
+            app:argType="com.dagger.hilt.data.models.People" />
+
+    </fragment>
+
+</navigation>
