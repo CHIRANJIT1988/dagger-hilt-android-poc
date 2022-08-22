@@ -1,6 +1,6 @@
 # Sample Android Project
 
-### This is sample android application to understand the using of below technologies
+### This is sample android application to understand the uses of:
 
 ##### Dagger Hilt
 ##### Kotlin
